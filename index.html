@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Niswander - AI Prompt Engineering Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1>Alex Niswander</h1>
+                <p class="tagline">AI Prompt Engineering & Technical Solutions</p>
+            </div>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#certifications" class="nav-link">Certifications</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2 class="hero-title">Building the Future with AI & Technology</h2>
+                <p class="hero-subtitle">Experienced developer specializing in AI prompt engineering, cloud solutions, and scalable technical infrastructure</p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="https://www.linkedin.com/in/alexniswander/" target="_blank" class="btn btn-secondary">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <!-- Introduction Video Placeholder -->
+                <div class="video-container">
+                    <div class="video-placeholder">
+                        <div class="video-icon">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                        <h3>Introduction Video</h3>
+                        <p>Coming Soon</p>
+                        <div class="video-overlay">
+                            <button class="video-play-btn" onclick="showVideoModal()">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-stack">
+                    <div class="tech-item">OpenAI</div>
+                    <div class="tech-item">LangChain</div>
+                    <div class="tech-item">Python</div>
+                    <div class="tech-item">Azure AI</div>
+                    <div class="tech-item">Hugging Face</div>
+                    <div class="tech-item">TruLens</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Modal -->
+        <div id="videoModal" class="video-modal">
+            <div class="video-modal-content">
+                <span class="video-close" onclick="closeVideoModal()">&times;</span>
+                <div class="video-wrapper">
+                    <div class="video-placeholder-modal">
+                        <div class="video-icon-large">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h3>Introduction Video</h3>
+                        <p>This video will showcase my background, technical expertise, and passion for AI prompt engineering.</p>
+                        <div class="video-status">
+                            <i class="fas fa-clock"></i>
+                            <span>Video coming soon...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image Modal -->
+        <div id="imageModal" class="image-modal">
+            <div class="image-modal-content">
+                <span class="image-close" onclick="closeImageModal()">&times;</span>
+                <div class="image-container">
+                    <img id="modalImage" src="" alt="" />
+                    <div class="image-caption" id="imageCaption"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>I'm a passionate AI engineer and technologist with extensive experience in prompt engineering, LLM integration, and AI system deployment. My expertise spans across major AI platforms including OpenAI, Anthropic, and Google Gemini, with hands-on experience in LangChain, LlamaIndex, and advanced evaluation frameworks like TruLens and RAGAS.</p>
+                        <p>I specialize in building production-ready AI applications, from prompt optimization and RAG systems to full-scale deployments on Azure AI, AWS Bedrock, and Hugging Face. Currently seeking opportunities in AI engineering roles where I can leverage my technical expertise to build intelligent systems that drive business value.</p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>5+</h3>
+                            <p>Years Technical Experience</p>
+                        </div>
+                        <div class="stat">
+                            <h3>10+</h3>
+                            <p>Major Projects Completed</p>
+                        </div>
+                        <div class="stat">
+                            <h3>3</h3>
+                            <p>Cloud Certifications</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>APIs & Models</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">OpenAI</span>
+                            <span class="skill-tag">Anthropic</span>
+                            <span class="skill-tag">Google Gemini</span>
+                            <span class="skill-tag">Llama</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Frameworks</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">LangChain</span>
+                            <span class="skill-tag">LlamaIndex</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Python</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Evaluation</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">TruLens</span>
+                            <span class="skill-tag">PromptLayer</span>
+                            <span class="skill-tag">RAGAS</span>
+                            <span class="skill-tag">Custom Metrics</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Deployment</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Hugging Face</span>
+                            <span class="skill-tag">Azure AI</span>
+                            <span class="skill-tag">AWS Bedrock</span>
+                            <span class="skill-tag">Docker</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Recent Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image" onclick="openImageModal('images/conference events.jpg', 'AI-Powered RAG System')">
+                            <img src="images/thumbnails/conference events.jpg" alt="AI-Powered RAG System" loading="lazy">
+                            <div class="image-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                        <div class="project-header">
+                            <h3>AI-Powered RAG System</h3>
+                            <div class="project-links">
+                                <a href="#" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="project-description">Built a production-ready Retrieval-Augmented Generation system using LangChain, OpenAI GPT-4, and vector databases. Implemented advanced prompt engineering techniques and evaluation metrics using TruLens for performance monitoring.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">LangChain</span>
+                            <span class="tech-tag">OpenAI GPT-4</span>
+                            <span class="tech-tag">TruLens</span>
+                            <span class="tech-tag">Vector DB</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image" onclick="openImageModal('images/Activity Tracker App.jpg', 'Activity Tracker App Screenshot')">
+                            <img src="images/thumbnails/Activity Tracker App.jpg" alt="Activity Tracker App Screenshot" loading="lazy">
+                            <div class="image-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                        <div class="project-header">
+                            <h3>Chores & Daily Activities Tracker</h3>
+                            <div class="project-links">
+                                <a href="https://aniswander55.github.io/MyChoices/" target="_blank" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="project-description">Customizable activity tracker with rewards points system built with React Hooks, local storage, and functional components. Features clean UI design and reusable components.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Local Storage</span>
+                            <span class="tech-tag">CSS3</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image" onclick="openImageModal('images/1.png', 'Trello-Style KanBan Board Screenshot')">
+                            <img src="images/thumbnails/1.png" alt="Trello-Style KanBan Board Screenshot" loading="lazy">
+                            <div class="image-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                        <div class="project-header">
+                            <h3>Trello-Style KanBan Board</h3>
+                        </div>
+                        <p class="project-description">Customizable and intuitive project management board with drag-and-drop functionality. Built as a single HTML page with advanced CSS and JavaScript.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Drag & Drop API</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image" onclick="openImageModal('images/workflow1.jpg', 'Vizio-Style Workflow Designer Screenshot')">
+                            <img src="images/thumbnails/workflow1.jpg" alt="Vizio-Style Workflow Designer Screenshot" loading="lazy">
+                            <div class="image-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                        <div class="project-header">
+                            <h3>Vizio-Style Workflow Designer</h3>
+                        </div>
+                        <p class="project-description">Advanced workflow visualization tool with customizable shapes, lines, colors, and text elements. Features professional diagramming capabilities.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">Canvas API</span>
+                            <span class="tech-tag">SVG</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image" onclick="openImageModal('images/2.png', 'Distributed CPU Mining System')">
+                            <img src="images/thumbnails/2.png" alt="Distributed CPU Mining System" loading="lazy">
+                            <div class="image-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                        <div class="project-header">
+                            <h3>Distributed CPU Mining System</h3>
+                        </div>
+                        <p class="project-description">Deployed 10 HP ProLiant Gen9 servers in rack configuration for cryptocurrency mining. Configured Windows Server 2019/2022 with dual Xeon processors.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Windows Server</span>
+                            <span class="tech-tag">HP ProLiant</span>
+                            <span class="tech-tag">Xeon Processors</span>
+                            <span class="tech-tag">Cryptocurrency</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image" onclick="openImageModal('images/3.png', 'GPU-Based Bitcoin Mining Server')">
+                            <img src="images/thumbnails/3.png" alt="GPU-Based Bitcoin Mining Server" loading="lazy">
+                            <div class="image-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                        <div class="project-header">
+                            <h3>GPU-Based Bitcoin Mining Server</h3>
+                        </div>
+                        <p class="project-description">Custom 10-GPU mining rig using Acer server motherboard and Nvidia 6-8GB cards. Integrated NiceHash backend for automated performance optimization.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Nvidia GPUs</span>
+                            <span class="tech-tag">NiceHash</span>
+                            <span class="tech-tag">Server Hardware</span>
+                            <span class="tech-tag">Performance Monitoring</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image" onclick="openImageModal('images/4.png', 'Chia Coin Mining Infrastructure')">
+                            <img src="images/thumbnails/4.png" alt="Chia Coin Mining Infrastructure" loading="lazy">
+                            <div class="image-overlay">
+                                <i class="fas fa-search-plus"></i>
+                            </div>
+                        </div>
+                        <div class="project-header">
+                            <h3>Chia Coin Mining Infrastructure</h3>
+                        </div>
+                        <p class="project-description">Multi-machine Chia mining system using 10+ PCs with HD controller cards. Implemented server rack monitoring and remote access capabilities.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Chia Mining</span>
+                            <span class="tech-tag">HD Controllers</span>
+                            <span class="tech-tag">Remote Access</span>
+                            <span class="tech-tag">System Monitoring</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <div class="container">
+                <h2 class="section-title">Technical Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>2025 - Distributed CPU Mining System</h3>
+                            <p>Deployed 10 HP ProLiant Gen9 servers in rack configuration for cryptocurrency mining. Configured Windows Server 2019/2022 OS with upgraded dual 12-20 core Xeon processors per server.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>2024 - GPU-Based Bitcoin Mining Server</h3>
+                            <p>Built custom 10-GPU mining rig using Acer server motherboard and Nvidia 6-8GB cards. Managed NiceHash backend to automate mining performance and profitability.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>2023 - Chia Coin Mining Infrastructure</h3>
+                            <p>Designed and implemented multi-machine Chia mining system using 10+ PCs. Installed HD controller cards to manage multiple hard drives per machine with server rack monitoring and remote access.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>2022 - ASIC Bitcoin Mining Deployment</h3>
+                            <p>Deployed 12 Bitmain Antminer ASIC miners using 220V power grid. Flashed SD card-based custom OS to improve hash rates and system stability. Handled performance monitoring, uptime optimization, and troubleshooting.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Certifications & Training</h2>
+                <div class="certifications-grid">
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <i class="fab fa-aws"></i>
+                        </div>
+                        <h3>AWS Certified Cloud Practitioner</h3>
+                        <p>Security, Identity & Compliance</p>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <i class="fab fa-microsoft"></i>
+                        </div>
+                        <h3>Microsoft Azure Fundamentals</h3>
+                        <p>Core Azure Concepts, Governance & Architecture</p>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Data Analytics & Machine Learning</h3>
+                        <p>Foundations & Business Use Cases</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">Let's Connect</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <p>Ready to discuss AI prompt engineering opportunities or collaborate on innovative projects?</p>
+                        <div class="contact-links">
+                            <a href="https://www.linkedin.com/in/alexniswander/" target="_blank" class="contact-link">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn Profile</span>
+                            </a>
+                            <a href="https://aniswander55.github.io/CEF/" target="_blank" class="contact-link">
+                                <i class="fas fa-globe"></i>
+                                <span>Portfolio Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Alex Niswander. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
