@@ -7,6 +7,43 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Critical CSS for GitHub Pages compatibility -->
+    <style>
+        /* Ensure images don't break layout on GitHub Pages */
+        .photo-slide img, .project-image img {
+            max-width: 100% !important;
+            height: auto !important;
+            object-fit: cover !important;
+        }
+        
+        .photo-panel {
+            max-width: 400px !important;
+            aspect-ratio: 4/5 !important;
+        }
+        
+        .project-image {
+            height: 200px !important;
+            overflow: hidden !important;
+        }
+        
+        @media (max-width: 768px) {
+            .photo-panel {
+                max-width: 300px !important;
+                aspect-ratio: 3/4 !important;
+            }
+            
+            .project-image {
+                height: 180px !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .project-image {
+                height: 160px !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -449,5 +486,24 @@
     </footer>
 
     <script src="script.js"></script>
+    
+    <!-- Debug script for GitHub Pages -->
+    <script>
+        // Check if CSS is loading properly
+        window.addEventListener('load', function() {
+            const stylesheet = document.querySelector('link[href="styles.css"]');
+            if (stylesheet && stylesheet.sheet) {
+                console.log('✅ CSS loaded successfully');
+            } else {
+                console.log('❌ CSS failed to load - using fallback styles');
+            }
+            
+            // Check image dimensions
+            const images = document.querySelectorAll('img');
+            images.forEach((img, index) => {
+                console.log(`Image ${index + 1}: ${img.naturalWidth}x${img.naturalHeight} (displayed: ${img.offsetWidth}x${img.offsetHeight})`);
+            });
+        });
+    </script>
 </body>
 </html>
