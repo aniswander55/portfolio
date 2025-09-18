@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
 
     // Observe elements for animation
-    const animateElements = document.querySelectorAll('.project-card, .timeline-item, .cert-card, .stat');
+    const animateElements = document.querySelectorAll('.project-card, .timeline-item, .cert-card');
     animateElements.forEach(el => {
         observer.observe(el);
     });
@@ -216,94 +216,7 @@ document.addEventListener('DOMContentLoaded', function() {
     createMobileMenu();
     window.addEventListener('resize', createMobileMenu);
 
-    // Print functionality
-    const addPrintButton = () => {
-        const printBtn = document.createElement('button');
-        printBtn.innerHTML = '<i class="fas fa-print"></i> Print Resume';
-        printBtn.className = 'btn btn-secondary print-btn';
-        printBtn.style.cssText = `
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            z-index: 1000;
-            background: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 1rem;
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            cursor: pointer;
-            box-shadow: var(--shadow-lg);
-            transition: all 0.3s ease;
-        `;
-        
-        printBtn.addEventListener('click', () => {
-            window.print();
-        });
-        
-        printBtn.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-3px) scale(1.1)';
-        });
-        
-        printBtn.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) scale(1)';
-        });
-        
-        document.body.appendChild(printBtn);
-    };
 
-    // Add print button
-    addPrintButton();
-
-    // Hide print button when printing
-    const style = document.createElement('style');
-    style.textContent = `
-        @media print {
-            .print-btn {
-                display: none !important;
-            }
-        }
-    `;
-    document.head.appendChild(style);
-
-    // Statistics counter animation
-    const animateCounters = () => {
-        const counters = document.querySelectorAll('.stat h3');
-        
-        counters.forEach(counter => {
-            const target = parseInt(counter.textContent);
-            const increment = target / 50;
-            let current = 0;
-            
-            const updateCounter = () => {
-                if (current < target) {
-                    current += increment;
-                    counter.textContent = Math.ceil(current) + (counter.textContent.includes('+') ? '+' : '');
-                    requestAnimationFrame(updateCounter);
-                } else {
-                    counter.textContent = target + (counter.textContent.includes('+') ? '+' : '');
-                }
-            };
-            
-            updateCounter();
-        });
-    };
-
-    // Trigger counter animation when stats section is visible
-    const statsSection = document.querySelector('.about-stats');
-    if (statsSection) {
-        const statsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateCounters();
-                    statsObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-        
-        statsObserver.observe(statsSection);
-    }
 
     // Add loading animation
     window.addEventListener('load', () => {
@@ -331,6 +244,9 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     window.addEventListener('scroll', debouncedScrollHandler);
+
+    // Photo panel functionality (simplified for single image)
+    // No carousel needed - just a single professional photo
 
     // Video modal functions
     window.showVideoModal = function() {
