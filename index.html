@@ -331,6 +331,10 @@
                 padding: 2rem 0 !important;
             }
             
+            .hero-content {
+                padding: 1rem !important;
+            }
+            
             .hero-title {
                 font-size: 2.25rem !important;
             }
@@ -355,20 +359,107 @@
             }
             
             .tech-stack {
-                grid-template-columns: repeat(3, 1fr) !important;
-                max-width: 400px !important;
+                grid-template-columns: repeat(2, 1fr) !important;
+                max-width: 100% !important;
+                gap: 0.75rem !important;
+                margin: 1.5rem 0 0 0 !important;
+            }
+            
+            .tech-item {
+                padding: 0.75rem !important;
+                font-size: 0.875rem !important;
             }
             
             .photo-panel {
                 max-width: 300px !important;
                 aspect-ratio: 3/4 !important;
+                margin-top: 2rem !important;
             }
         }
         
         @media (max-width: 480px) {
+            .nav {
+                padding: 0.75rem !important;
+            }
+            
+            .nav-brand h1 {
+                font-size: 1.25rem !important;
+            }
+            
+            .tagline {
+                font-size: 0.8rem !important;
+            }
+            
+            .contact-item {
+                font-size: 0.75rem !important;
+            }
+            
+            .nav-links {
+                gap: 0.75rem !important;
+            }
+            
+            .nav-link {
+                font-size: 0.8rem !important;
+            }
+            
+            .hero {
+                padding: 1rem 0 !important;
+            }
+            
+            .hero-content {
+                padding: 0.75rem !important;
+            }
+            
+            .hero-title {
+                font-size: 1.75rem !important;
+                line-height: 1.3 !important;
+            }
+            
+            .hero-quote p {
+                font-size: 0.9rem !important;
+            }
+            
             .tech-stack {
-                grid-template-columns: repeat(2, 1fr) !important;
-                max-width: 300px !important;
+                grid-template-columns: 1fr !important;
+                max-width: 100% !important;
+                gap: 0.5rem !important;
+                margin: 1rem 0 0 0 !important;
+            }
+            
+            .tech-item {
+                padding: 0.75rem !important;
+                font-size: 0.8rem !important;
+            }
+            
+            .tech-button .btn {
+                padding: 0.75rem 1rem !important;
+                font-size: 0.875rem !important;
+            }
+            
+            .photo-panel {
+                max-width: 250px !important;
+                aspect-ratio: 3/4 !important;
+                margin-top: 1.5rem !important;
+            }
+        }
+        
+        @media (max-width: 360px) {
+            .hero-title {
+                font-size: 1.5rem !important;
+            }
+            
+            .tech-stack {
+                gap: 0.4rem !important;
+            }
+            
+            .tech-item {
+                padding: 0.6rem !important;
+                font-size: 0.75rem !important;
+            }
+            
+            .tech-button .btn {
+                padding: 0.6rem 0.8rem !important;
+                font-size: 0.8rem !important;
             }
         }
     </style>
@@ -512,21 +603,21 @@
                 <h2 class="section-title">Recent Projects</h2>
                 <div class="projects-grid">
                     <div class="project-card">
-                        <div class="project-image" onclick="openImageModal('conference events.jpg', 'AI-Powered RAG System')">
-                            <img src="conference events.jpg" alt="AI-Powered RAG System" loading="lazy">
+                        <div class="project-image" onclick="openImageModal('conference events.jpg', 'AI Powered Facesheet')">
+                            <img src="conference events.jpg" alt="AI Powered Facesheet" loading="lazy">
                             <div class="image-overlay">
                                 <i class="fas fa-search-plus"></i>
                             </div>
                         </div>
                         <div class="project-header">
-                            <h3>AI-Powered RAG System</h3>
+                            <h3>AI Powered Facesheet</h3>
                             <div class="project-links">
                                 <a href="#" target="_blank" class="project-link">
                                     <i class="fas fa-external-link-alt"></i>
                                 </a>
                             </div>
                         </div>
-                        <p class="project-description">Built a production-ready Retrieval-Augmented Generation system using LangChain, OpenAI GPT-4, and vector databases. Implemented advanced prompt engineering techniques and evaluation metrics using TruLens for performance monitoring.</p>
+                        <p class="project-description">Built a production-ready events & conference facesheet which shows 16-20 contacts on a page. Available to save as a local file, use digitally and printable.</p>
                         <div class="project-tech">
                             <span class="tech-tag">LangChain</span>
                             <span class="tech-tag">OpenAI GPT-4</span>
@@ -543,7 +634,7 @@
                             </div>
                         </div>
                         <div class="project-header">
-                            <h3>Chores & Daily Activities Tracker</h3>
+                            <h3>Daily Activities Tracker</h3>
                             <div class="project-links">
                                 <a href="https://aniswander55.github.io/MyChoices/" target="_blank" class="project-link">
                                     <i class="fas fa-external-link-alt"></i>
@@ -560,8 +651,8 @@
                     </div>
 
                     <div class="project-card">
-                        <div class="project-image" onclick="openImageModal('1.png', 'Trello-Style KanBan Board Screenshot')">
-                            <img src="1.png" alt="Trello-Style KanBan Board Screenshot" loading="lazy">
+                        <div class="project-image" onclick="openImageModal('Kanban1.jpg', 'Trello-Style KanBan Board Screenshot')">
+                            <img src="Kanban1.jpg" alt="Trello-Style KanBan Board Screenshot" loading="lazy">
                             <div class="image-overlay">
                                 <i class="fas fa-search-plus"></i>
                             </div>
@@ -598,16 +689,16 @@
                     </div>
 
                     <div class="project-card">
-                        <div class="project-image" onclick="openImageModal('2.png', 'Distributed CPU Mining System')">
-                            <img src="2.png" alt="Distributed CPU Mining System" loading="lazy">
+                        <div class="project-image" onclick="openImageModal('1.png', 'Get Company Insights')">
+                            <img src="1.png" alt="Get Company Insights" loading="lazy">
                             <div class="image-overlay">
                                 <i class="fas fa-search-plus"></i>
                             </div>
                         </div>
                         <div class="project-header">
-                            <h3>Distributed CPU Mining System</h3>
+                            <h3>Get Company Insights</h3>
                         </div>
-                        <p class="project-description">Deployed 10 HP ProLiant Gen9 servers in rack configuration for cryptocurrency mining. Configured Windows Server 2019/2022 with dual Xeon processors.</p>
+                        <p class="project-description">Created extensive company list which does real-time gathering of company insights, such as revenue, employee count, headquarters location, and POSI analysis.</p>
                         <div class="project-tech">
                             <span class="tech-tag">Windows Server</span>
                             <span class="tech-tag">HP ProLiant</span>
